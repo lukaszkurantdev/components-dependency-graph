@@ -1,0 +1,37 @@
+{
+  "name": "components-dependency-graph",
+  "version": "1.0.0",
+  "description": "A script for creating a graph of relationships between components in React.js / React Native applications.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "compile": "tsc",
+    "start": "tsc && node ./dist/ComponentGraphAnalyzer.js"
+  },
+  "bin": {
+    "rca": "dist/cli.js"
+  },
+  "author": "Łukasz Kurant",
+  "license": "MIT",
+  "dependencies": {
+    "@dagrejs/graphlib": "2.2.2",
+    "@types/node": "20.14.1",
+    "commander": "12.1.0",
+    "jest": "29.7.0",
+    "node-graphviz": "0.1.1",
+    "typescript": "5.4.5",
+    "typescript-eslint": "7.12.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.24.7",
+    "@babel/preset-env": "7.24.7",
+    "@babel/preset-typescript": "7.24.7",
+    "@types/jest": "29.5.12",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "babel-jest": "29.7.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-testing-library": "8.0.1"
+  }
+}

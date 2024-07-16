@@ -1,0 +1,1 @@
+export const EXTENSIONS_TO_ANALYZE = [".js", ".jsx", ".ts", ".tsx"];
