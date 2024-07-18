@@ -1,6 +1,6 @@
 {
   "name": "components-dependency-graph",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A script for creating a graph of relationships between components in React.js / React Native applications.",
   "main": "index.js",
   "scripts": {
