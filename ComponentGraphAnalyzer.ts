@@ -47,6 +47,7 @@ const analyze = (fileNode: FileNode) => {
 };
 
 export const fileBasedAnalyze = (filePath: string, config: RawConfig = {}) => {
+  GlobalConfig.clear();
   GlobalConfig.getInstance(config);
 
   const rootNode = new FileNode(filePath);
@@ -61,6 +62,7 @@ export const directoryBasedAnalyze = (
   catalogPath: string,
   config: RawConfig = {}
 ) => {
+  GlobalConfig.clear();
   GlobalConfig.getInstance(config);
 
   const results: string[] = [];

@@ -63,6 +63,7 @@ const analyze = (fileNode) => {
     }
 };
 const fileBasedAnalyze = (filePath, config = {}) => {
+    Config_1.GlobalConfig.clear();
     Config_1.GlobalConfig.getInstance(config);
     const rootNode = new FileNode_1.FileNode(filePath);
     rootNode.setAsUsed();
@@ -71,6 +72,7 @@ const fileBasedAnalyze = (filePath, config = {}) => {
 };
 exports.fileBasedAnalyze = fileBasedAnalyze;
 const directoryBasedAnalyze = (catalogPath, config = {}) => {
+    Config_1.GlobalConfig.clear();
     Config_1.GlobalConfig.getInstance(config);
     const results = [];
     const files = (0, getFilesList_1.getFilesList)(catalogPath);
