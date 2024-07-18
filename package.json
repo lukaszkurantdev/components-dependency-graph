@@ -9,7 +9,7 @@
     "start": "tsc && node ./dist/ComponentGraphAnalyzer.js"
   },
   "bin": {
-    "rca": "dist/cli.js"
+    "components-dependency-graph": "dist/cli.js"
   },
   "author": "Łukasz Kurant",
   "license": "MIT",
