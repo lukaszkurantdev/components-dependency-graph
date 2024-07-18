@@ -72,14 +72,16 @@ const generateGraphDiagram = (rootNode) => {
     return [...new Set(diagram)];
 };
 exports.generateGraphDiagram = generateGraphDiagram;
-const generateGraphVizDiagram = async (edges, path) => {
+const generateGraphVizDiagram = async (edges, path, withSave = true) => {
     let diagram = "";
     for (let edge of edges) {
         diagram += `\t${edge}\n`;
     }
     diagram = `digraph {\n${diagram}}`;
-    const svg = await node_graphviz_1.graphviz.dot(diagram, 'svg');
-    fs.writeFileSync(`${path}/diagram.svg`, svg);
+    const svg = await node_graphviz_1.graphviz.dot(diagram, "svg");
+    if (withSave) {
+        fs.writeFileSync(`${path}/diagram.svg`, svg);
+    }
     return svg;
 };
 exports.generateGraphVizDiagram = generateGraphVizDiagram;

@@ -69,8 +69,11 @@ export const generateGraphDiagram = (rootNode: FileNode) => {
   return [...new Set(diagram)];
 };
 
-
-export const generateGraphVizDiagram = async (edges: string[], path: string) => {
+export const generateGraphVizDiagram = async (
+  edges: string[],
+  path: string,
+  withSave: boolean = true
+) => {
   let diagram = "";
 
   for (let edge of edges) {
@@ -79,12 +82,14 @@ export const generateGraphVizDiagram = async (edges: string[], path: string) => 
 
   diagram = `digraph {\n${diagram}}`;
 
-  const svg = await graphviz.dot(diagram, 'svg')
-  fs.writeFileSync(`${path}/diagram.svg`, svg);
+  const svg = await graphviz.dot(diagram, "svg");
+
+  if (withSave) {
+    fs.writeFileSync(`${path}/diagram.svg`, svg);
+  }
 
   return svg;
 };
-
 
 export const generateDagreGraph = (edges: string[]) => {
   const graph = new Graph({ directed: true });
