@@ -48,6 +48,10 @@ Just create in base location file called `cdg.config.json`:
 | generateGraphWithFilesPaths        | boolean                | Specify if graph nodes should have path added to name.                 |
 | pathAliases                        | Record<string, string> | Dictionary to replaces paths based on Babel configuration              |
 
+### VSCode Extension
+
+[components-dependency-graph-vscode](https://github.com/lukaszkurantdev/components-dependency-graph-vscode)
+
 ## License
 
 MIT
